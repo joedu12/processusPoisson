@@ -1,5 +1,5 @@
 /*
- * Decompiled with CFR 0_123.
+ * Soulenq Joévin, Bastien Enjalbert, Peries Mickael
  */
 import java.awt.Container;
 import java.awt.Dimension;

@@ -1,5 +1,5 @@
 /*
- * Decompiled with CFR 0_123.
+ * Soulenq Joévin, Bastien Enjalbert, Peries Mickael
  */
 package ihm;
 
@@ -60,7 +60,7 @@ implements ActionListener {
     public Application() {
         this.setDefaultCloseOperation(3);
         this.setBounds(100, 100, 779, 522);
-        this.setTitle("V\u00e9rification math\u00e9matique Math.random() de JAVA");
+        this.setTitle("Vérification mathématique Math.random() de JAVA");
         this.contentPane = new JPanel();
         this.contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         this.setContentPane(this.contentPane);
@@ -88,7 +88,7 @@ implements ActionListener {
         this.panel_bouton.add(this.btnLoiWeibull);
         this.panel_khi2 = new JPanel();
         this.panel_information.add((Component)this.panel_khi2, "South");
-        this.lblKhi = new JLabel("D\u00b2 = ");
+        this.lblKhi = new JLabel("D² = ");
         this.panel_khi2.add(this.lblKhi);
         this.textField = new JTextField();
         this.panel_khi2.add(this.textField);
@@ -141,7 +141,7 @@ implements ActionListener {
     private ListeClasse createGraphiqueExponentielleTheorique() {
         try {
             ListeClasse listeClasseAleatoireExponentielle = Main.listeClassesWithLoiExponentielleTheorique();
-            this.splitPane.setLeftComponent(new GrapheComponent("Valeur th\u00e9orique loi exponentielle", listeClasseAleatoireExponentielle));
+            this.splitPane.setLeftComponent(new GrapheComponent("Valeur théorique loi exponentielle", listeClasseAleatoireExponentielle));
             return listeClasseAleatoireExponentielle;
         }
         catch (Exception e1) {
@@ -154,7 +154,7 @@ implements ActionListener {
         List<Double> listeAleatoireExponentielle = Main.tirerNBAleatoireWithLoiExponentielle(12.0);
         try {
             ListeClasse listeClasseAleatoireExponentielle = Main.trierListe(listeAleatoireExponentielle, 0.0, 1.0);
-            this.splitPane.setRightComponent(new GrapheComponent("Valeur constat\u00e9e loi exponentielle", listeClasseAleatoireExponentielle));
+            this.splitPane.setRightComponent(new GrapheComponent("Valeur constatée loi exponentielle", listeClasseAleatoireExponentielle));
             return listeClasseAleatoireExponentielle;
         }
         catch (Exception e1) {
@@ -167,7 +167,7 @@ implements ActionListener {
         List<Double> listeAleatoireUniforme = Main.tirerNBAleatoireWithLoiUniformeTheorique();
         try {
             ListeClasse listeClasseAleatoireUniforme = Main.trierListe(listeAleatoireUniforme, 0.0, 1.0);
-            this.splitPane.setLeftComponent(new GrapheComponent("Valeur th\u00e9orique loi uniforme", listeClasseAleatoireUniforme));
+            this.splitPane.setLeftComponent(new GrapheComponent("Valeur théorique loi uniforme", listeClasseAleatoireUniforme));
             return listeClasseAleatoireUniforme;
         }
         catch (Exception e1) {
@@ -180,7 +180,7 @@ implements ActionListener {
         List<Double> listeAleatoire = Main.tirerNbAleatoireWithLoiUniforme();
         try {
             ListeClasse listeClasseAleatoire = Main.trierListe(listeAleatoire, 0.0, 1.0);
-            this.splitPane.setRightComponent(new GrapheComponent("Valeur constat\u00e9e loi uniforme", listeClasseAleatoire));
+            this.splitPane.setRightComponent(new GrapheComponent("Valeur constatée loi uniforme", listeClasseAleatoire));
             return listeClasseAleatoire;
         }
         catch (Exception e1) {
@@ -193,7 +193,7 @@ implements ActionListener {
         List<Double> listeAleatoireLoiNormale = Main.tirerNBAleatoireWithLoiNormale();
         try {
             ListeClasse listeClasseAleatoireLoiNormale = Main.trierListe(listeAleatoireLoiNormale, -5.0, 5.0);
-            this.splitPane.setRightComponent(new GrapheComponent("Valeur constat\u00e9e loi normale", listeClasseAleatoireLoiNormale));
+            this.splitPane.setRightComponent(new GrapheComponent("Valeur constatée loi normale", listeClasseAleatoireLoiNormale));
             return listeClasseAleatoireLoiNormale;
         }
         catch (Exception e1) {
@@ -205,7 +205,7 @@ implements ActionListener {
     private ListeClasse createGraphiqueNormaleTheorique() {
         try {
             ListeClasse listeClasseAleatoireNoramle = Main.listeClassesWithLoiNormaleTheorique();
-            this.splitPane.setLeftComponent(new GrapheComponent("Valeur th\u00e9orique loi exponentielle", listeClasseAleatoireNoramle));
+            this.splitPane.setLeftComponent(new GrapheComponent("Valeur théorique loi exponentielle", listeClasseAleatoireNoramle));
             return listeClasseAleatoireNoramle;
         }
         catch (Exception e1) {
@@ -218,7 +218,7 @@ implements ActionListener {
         List<Double> listeAleatoireLoiWeibull = Main.tirerNBAleatoireWithLoiWeibull(4.0, 4.0);
         try {
             ListeClasse listeClasseAleatoireLoiWeibull = Main.trierListe(listeAleatoireLoiWeibull, 0.0, 10.0);
-            this.splitPane.setRightComponent(new GrapheComponent("Valeur constat\u00e9e loi weibull", listeClasseAleatoireLoiWeibull));
+            this.splitPane.setRightComponent(new GrapheComponent("Valeur constatée loi weibull", listeClasseAleatoireLoiWeibull));
             return listeClasseAleatoireLoiWeibull;
         }
         catch (Exception e1) {
@@ -230,7 +230,7 @@ implements ActionListener {
     private ListeClasse createGraphiqueWeibullTheorique() {
         try {
             ListeClasse listeClasseAleatoireWeibull = Main.listeClassesWithLoiWeibullTheorique();
-            this.splitPane.setLeftComponent(new GrapheComponent("Valeur th\u00e9orique loi exponentielle", listeClasseAleatoireWeibull));
+            this.splitPane.setLeftComponent(new GrapheComponent("Valeur théorique loi exponentielle", listeClasseAleatoireWeibull));
             return listeClasseAleatoireWeibull;
         }
         catch (Exception e1) {

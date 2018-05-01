@@ -1,5 +1,5 @@
 /*
- * Decompiled with CFR 0_123.
+ * Soulenq Joévin, Bastien Enjalbert, Peries Mickael
  */
 package ihm;
 
@@ -44,8 +44,8 @@ public class Generateur_ihm {
         JButton btnLoiExponentielle = new JButton("Loi Exponentielle");
         JButton btnLoiDeWeibull = new JButton("Loi de Weibull");
         JButton btnLoiNormale = new JButton("Loi Normale");
-        JLabel lblGnrateurDeVariables = new JLabel("G\u00e9n\u00e9rateur de variables al\u00e9atoires pour les lois suivantes : ");
-        JLabel lblNombreDeValeurs = new JLabel("Nombre de valeurs a g\u00e9n\u00e9rer :");
+        JLabel lblGnrateurDeVariables = new JLabel("Générateur de variables aléatoires pour les lois suivantes : ");
+        JLabel lblNombreDeValeurs = new JLabel("Nombre de valeurs a générer :");
         this.nbValeur = new JTextField();
         this.expLambda = new JTextField();
         this.weibullLambda = new JTextField();

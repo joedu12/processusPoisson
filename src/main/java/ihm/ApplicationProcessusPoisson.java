@@ -1,5 +1,5 @@
 /*
- * Decompiled with CFR 0_123.
+ * Soulenq Joévin, Bastien Enjalbert, Peries Mickael
  */
 package ihm;
 
@@ -27,9 +27,9 @@ import metier.ProcessusPoisson;
 import org.jfree.ui.ApplicationFrame;
 
 public class ApplicationProcessusPoisson
-extends ApplicationFrame
-implements ActionListener,
-DocumentListener {
+        extends ApplicationFrame
+        implements ActionListener,
+        DocumentListener {
     private static final long serialVersionUID = 1;
     private JButton btnLancerProcessus;
     private JButton btnAfficherProcessus;
@@ -97,7 +97,7 @@ DocumentListener {
         this.processPoisson = new AfficheProcessPoisson();
         this.processPoisson.setBorder(new TitledBorder(null, "Affichage", 4, 2, null, null));
         this.panel_2 = new JPanel();
-        this.panel_2.setBorder(new TitledBorder(null, "Param\u00e8tres", 4, 2, null, null));
+        this.panel_2.setBorder(new TitledBorder(null, "Paramètres", 4, 2, null, null));
         panel.add((Component)this.panel_2, "North");
         this.panel_2.setLayout(new FlowLayout(1, 5, 5));
         this.panel_NbSimu = new JPanel();
@@ -116,12 +116,12 @@ DocumentListener {
         this.panel_Lambda.add(this.textFieldLambda);
         this.textFieldLambda.setColumns(10);
         this.textFieldLambda.getDocument().addDocumentListener(this);
-        this.btnMAJDonnees = new JButton("Valider les param\u00e8tres");
+        this.btnMAJDonnees = new JButton("Valider les paramètres");
         this.btnMAJDonnees.setEnabled(false);
         this.btnMAJDonnees.addActionListener(this);
         this.panel_saisieT = new JPanel();
         this.panel_2.add(this.panel_saisieT);
-        this.lblPriodeDeTemps = new JLabel("p\u00e9riode de temps");
+        this.lblPriodeDeTemps = new JLabel("période de temps");
         this.panel_saisieT.add(this.lblPriodeDeTemps);
         this.textFieldT = new JTextField();
         this.panel_saisieT.add(this.textFieldT);
@@ -136,11 +136,11 @@ DocumentListener {
         this.panel_action.add(this.btnLancerProcessus);
         this.btnLancerProcessus.setEnabled(false);
         this.btnLancerProcessus.addActionListener(this);
-        this.btnAfficherProcessus = new JButton("Afficher le r\u00e9sultat");
+        this.btnAfficherProcessus = new JButton("Afficher le résultat");
         this.panel_action.add(this.btnAfficherProcessus);
         this.btnAfficherProcessus.setEnabled(false);
         this.panel_verification = new JPanel();
-        this.panel_verification.setBorder(new TitledBorder(null, "V\u00e9rification", 4, 2, null, null));
+        this.panel_verification.setBorder(new TitledBorder(null, "Vérification", 4, 2, null, null));
         panel.add((Component)this.panel_verification, "South");
         this.panel_verification.setLayout(new BorderLayout(0, 0));
         this.panel_verifLoiExpo = new JPanel();
@@ -256,4 +256,3 @@ DocumentListener {
     }
 
 }
-
