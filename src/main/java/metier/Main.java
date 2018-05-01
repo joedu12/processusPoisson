@@ -13,7 +13,7 @@ import outils.lois.LoisProbabilite;
 
 public class Main {
     public static final int NB_SIMULATION = 1000;
-    public static final int NB_CLASSE = 10;
+    public static final int NB_INTERVALLE = 10;
     public static final int LAMBDA = 12;
     public static final double ALPHA_WEIBULL = 4.0;
     public static final double BETA_WEIBULL = 4.0;
@@ -35,7 +35,7 @@ public class Main {
     public static List<Double> tirerNbAleatoireWithLoiUniforme() {
         ArrayList<Double> listeNBAleat = new ArrayList<Double>();
         int i = 0;
-        while (i < 1000) {
+        while (i < NB_SIMULATION) {
             listeNBAleat.add(GenerateurAleatoire.generateurAleatoire());
             ++i;
         }
@@ -46,7 +46,7 @@ public class Main {
         ArrayList<Double> listeNBAleat = new ArrayList<Double>();
         double valeurProcheZero = 1.0E-4;
         int i = 0;
-        while (i < 1000) {
+        while (i < NB_SIMULATION) {
             double element = valeurProcheZero + (double)i / 1000.0;
             listeNBAleat.add(element);
             ++i;
@@ -57,7 +57,7 @@ public class Main {
     public static List<Double> tirerNBAleatoireWithLoiExponentielle(double lambda) {
         ArrayList<Double> listeNBAleat = new ArrayList<Double>();
         int i = 0;
-        while (i < 1000) {
+        while (i < NB_SIMULATION) {
             listeNBAleat.add(LoisProbabilite.loiExponentielle(GenerateurAleatoire.generateurAleatoire(), lambda));
             ++i;
         }
@@ -66,7 +66,7 @@ public class Main {
 
     public static ListeClasse listeClassesWithLoiExponentielleTheorique() {
         Double[] populationParClasse = new Double[]{669.0, 210.0, 64.0, 19.0, 6.0, 2.0, 1.0, 0.0, 0.0, 0.0};
-        ListeClasse listeClasse = new ListeClasse(10, 0.0, 1.0);
+        ListeClasse listeClasse = new ListeClasse(NB_INTERVALLE, 0.0, 1.0);
         int i = 0;
         while (i < populationParClasse.length) {
             int j = 0;
@@ -82,7 +82,7 @@ public class Main {
     public static List<Double> tirerNBAleatoireWithLoiNormale() {
         ArrayList<Double> listeNBAleat = new ArrayList<Double>();
         int i = 0;
-        while (i < 1000) {
+        while (i < NB_SIMULATION) {
             listeNBAleat.add(LoisProbabilite.loiNormale(GenerateurAleatoire.generateurAleatoire(), GenerateurAleatoire.generateurAleatoire()));
             ++i;
         }
@@ -91,7 +91,7 @@ public class Main {
 
     public static ListeClasse listeClassesWithLoiNormaleTheorique() {
         Double[] populationParClasse = new Double[]{0.0, 1.0, 22.0, 136.0, 341.0, 341.0, 136.0, 22.0, 1.0, 0.0};
-        ListeClasse listeClasse = new ListeClasse(10, -5.0, 5.0);
+        ListeClasse listeClasse = new ListeClasse(NB_INTERVALLE, -5.0, 5.0);
         int i = 0;
         while (i < populationParClasse.length) {
             int j = 0;
@@ -107,7 +107,7 @@ public class Main {
     public static List<Double> tirerNBAleatoireWithLoiWeibull(double alpha, double beta) {
         ArrayList<Double> listeNBAleat = new ArrayList<Double>();
         int i = 0;
-        while (i < 1000) {
+        while (i < NB_SIMULATION) {
             listeNBAleat.add(LoisProbabilite.loiWeibull(GenerateurAleatoire.generateurAleatoire(), alpha, beta));
             ++i;
         }
@@ -116,7 +116,7 @@ public class Main {
 
     public static ListeClasse listeClassesWithLoiWeibullTheorique() {
         Double[] populationParClasse = new Double[]{4.0, 57.0, 210.0, 361.0, 281.0, 81.0, 6.0, 0.0, 0.0, 0.0};
-        ListeClasse listeClasse = new ListeClasse(10, 0.0, 10.0);
+        ListeClasse listeClasse = new ListeClasse(NB_INTERVALLE, 0.0, 10.0);
         int i = 0;
         while (i < populationParClasse.length) {
             int j = 0;
@@ -130,7 +130,7 @@ public class Main {
     }
 
     public static ListeClasse trierListe(List<Double> listeATrier, double borneInf, double borneSup) throws Exception {
-        ListeClasse listeClasse = new ListeClasse(10, borneInf, borneSup);
+        ListeClasse listeClasse = new ListeClasse(NB_INTERVALLE, borneInf, borneSup);
         int i = 0;
         while (i < listeATrier.size()) {
             listeClasse.ajouterElement(listeATrier.get(i));

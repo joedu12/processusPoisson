@@ -50,7 +50,7 @@ public class Generateur_ihm {
         this.expLambda = new JTextField();
         this.weibullLambda = new JTextField();
         this.weibullBeta = new JTextField();
-        lblGnrateurDeVariables.setFont(new Font("Tahoma", 0, 24));
+        lblGnrateurDeVariables.setFont(new Font("Calibri", 0, 24));
         lblGnrateurDeVariables.setBounds(12, 13, 633, 34);
         this.frame.getContentPane().add(lblGnrateurDeVariables);
         btnLoiNormale.setBounds(12, 98, 130, 25);
@@ -83,7 +83,7 @@ public class Generateur_ihm {
             public void mouseClicked(MouseEvent arg0) {
             }
         });
-        lblNombreDeValeurs.setFont(new Font("Tahoma", 0, 16));
+        lblNombreDeValeurs.setFont(new Font("Calibri", 0, 16));
         lblNombreDeValeurs.setBounds(22, 60, 226, 25);
         this.frame.getContentPane().add(lblNombreDeValeurs);
         this.nbValeur.setBounds(253, 61, 72, 22);

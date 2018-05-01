@@ -29,10 +29,7 @@ public class Classe<E> {
     }
 
     public boolean estVide() {
-        if (this.elements.size() == 0) {
-            return true;
-        }
-        return false;
+        return this.elements.size() == 0;
     }
 
     public E getBorneInf() {

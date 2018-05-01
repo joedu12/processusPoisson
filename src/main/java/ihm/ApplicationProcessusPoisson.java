@@ -150,7 +150,7 @@ public class ApplicationProcessusPoisson
         this.panel_LoiExpoTheor = new JPanel();
         this.panel_verifLoiExpo.add((Component)this.panel_LoiExpoTheor, "North");
         this.lblLoiExpoTheor = new JLabel("(THEORIQUE)   ");
-        this.lblLoiExpoTheor.setFont(new Font("Tahoma", 1, 11));
+        this.lblLoiExpoTheor.setFont(new Font("Calibri", 1, 11));
         this.panel_LoiExpoTheor.add(this.lblLoiExpoTheor);
         this.lblLoiExpoLambda = new JLabel("1/ lambda = ");
         this.panel_LoiExpoTheor.add(this.lblLoiExpoLambda);
@@ -159,7 +159,7 @@ public class ApplicationProcessusPoisson
         this.panel_LoiExpoPrat = new JPanel();
         this.panel_verifLoiExpo.add((Component)this.panel_LoiExpoPrat, "South");
         this.lblLoiExpoPrat = new JLabel("(PRATIQUE)   ");
-        this.lblLoiExpoPrat.setFont(new Font("Tahoma", 1, 11));
+        this.lblLoiExpoPrat.setFont(new Font("Calibri", 1, 11));
         this.panel_LoiExpoPrat.add(this.lblLoiExpoPrat);
         this.lblLoiExpoLambda2 = new JLabel("1/ lambda = ");
         this.panel_LoiExpoPrat.add(this.lblLoiExpoLambda2);
@@ -172,7 +172,7 @@ public class ApplicationProcessusPoisson
         this.panel_ProcessPoissonTheor = new JPanel();
         this.panel_verifProcessPoisson.add((Component)this.panel_ProcessPoissonTheor, "North");
         this.lblProcessPoissonTheor = new JLabel("(THEORIQUE)   ");
-        this.lblProcessPoissonTheor.setFont(new Font("Tahoma", 1, 11));
+        this.lblProcessPoissonTheor.setFont(new Font("Calibri", 1, 11));
         this.panel_ProcessPoissonTheor.add(this.lblProcessPoissonTheor);
         this.lblProcessPoissonLambdaT = new JLabel("Lambda * T = ");
         this.panel_ProcessPoissonTheor.add(this.lblProcessPoissonLambdaT);
@@ -181,7 +181,7 @@ public class ApplicationProcessusPoisson
         this.panel_ProcessPoissonPrat = new JPanel();
         this.panel_verifProcessPoisson.add((Component)this.panel_ProcessPoissonPrat, "South");
         this.lblProcessPoissonPrat = new JLabel("(PRATIQUE)   ");
-        this.lblProcessPoissonPrat.setFont(new Font("Tahoma", 1, 11));
+        this.lblProcessPoissonPrat.setFont(new Font("Calibri", 1, 11));
         this.panel_ProcessPoissonPrat.add(this.lblProcessPoissonPrat);
         this.lblProcessPoissonLambdaTPrat = new JLabel("Lambda * T = ");
         this.panel_ProcessPoissonPrat.add(this.lblProcessPoissonLambdaTPrat);

@@ -22,14 +22,14 @@ extends ChartPanel {
     private static final long serialVersionUID = 1;
 
     public GrapheComponent(String titreGraphe, ListeClasse aAfficher) {
-        super(ChartFactory.createBarChart(titreGraphe, "Classe", "Nombre de V.A.", GrapheComponent.createDataset(aAfficher), PlotOrientation.VERTICAL, true, true, false));
+        super(ChartFactory.createBarChart3D(titreGraphe, "Intervalles", "Nombre de variables aléatoires", GrapheComponent.createDataset(aAfficher), PlotOrientation.VERTICAL, false, false, false));
     }
 
     private static CategoryDataset createDataset(ListeClasse listeClasse) {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
         for (Classe<Double> classe : listeClasse.getClasses()) {
             String enteteClasse = "[" + String.format("%.2f", classe.getBorneInf()) + "; " + String.format("%.2f", classe.getBorneSup()) + "]";
-            dataset.addValue(classe.nbElement(), (Comparable)((Object)enteteClasse), (Comparable)((Object)enteteClasse));
+            dataset.addValue(classe.nbElement(), enteteClasse, enteteClasse);
         }
         return dataset;
     }
