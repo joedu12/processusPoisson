@@ -1,5 +1,5 @@
 /*
- * Bastien Enjalbert, Peries Mickael, Soulenq Joévin
+ * Decompiled with CFR 0_123.
  */
 package outils;
 

@@ -3,11 +3,13 @@
  */
 package com.keypoint;
 
-import java.awt.*;
+import java.awt.Image;
+import java.awt.image.ImageObserver;
 import java.awt.image.PixelGrabber;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.io.PrintStream;
 import java.util.zip.CRC32;
 import java.util.zip.Deflater;
 import java.util.zip.DeflaterOutputStream;
@@ -215,7 +217,7 @@ public class PngEncoder {
         this.bytesPerPixel = this.encodeAlpha ? 4 : 3;
         Deflater scrunch = new Deflater(this.compressionLevel);
         ByteArrayOutputStream outBytes = new ByteArrayOutputStream(1024);
-        DeflaterOutputStream compBytes = new DeflaterOutputStream(outBytes, scrunch);
+        DeflaterOutputStream compBytes = new DeflaterOutputStream((OutputStream)outBytes, scrunch);
         try {
             int nRows;
             for (int rowsLeft = this.height; rowsLeft > 0; rowsLeft -= nRows) {

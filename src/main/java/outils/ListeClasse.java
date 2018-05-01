@@ -1,10 +1,11 @@
 /*
- * Bastien Enjalbert, Peries Mickael, Soulenq Joévin
+ * Decompiled with CFR 0_123.
  */
 package outils;
 
 import java.util.ArrayList;
 import java.util.List;
+import outils.Classe;
 
 public class ListeClasse {
     private int nbClasse;

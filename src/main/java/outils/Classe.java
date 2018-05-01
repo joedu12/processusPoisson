@@ -1,5 +1,5 @@
 /*
- * Bastien Enjalbert, Peries Mickael, Soulenq Joévin
+ * Decompiled with CFR 0_123.
  */
 package outils;
 
@@ -29,7 +29,10 @@ public class Classe<E> {
     }
 
     public boolean estVide() {
-        return this.elements.size() == 0;
+        if (this.elements.size() == 0) {
+            return true;
+        }
+        return false;
     }
 
     public E getBorneInf() {

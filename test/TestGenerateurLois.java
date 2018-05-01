@@ -3,6 +3,7 @@
  */
 package test;
 
+import java.io.PrintStream;
 import outils.GenerateurAleatoire;
 
 public class TestGenerateurLois {
