@@ -39,7 +39,7 @@ extends ChartPanel {
 
     public void afficherProcessus() {
         IntervalXYDataset dataset = this.createDataset(this.pp.getListeNombresGeneres());
-        JFreeChart chart = ChartFactory.createXYBarChart("Processus de poisson", "Temps", false, null, dataset);
+        JFreeChart chart = ChartFactory.createXYBarChart(null, "Temps", false, "Évènements", dataset);
         chart.removeLegend();
         chart.setAntiAlias(true);
         this.setChart(chart);
