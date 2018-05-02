@@ -3,21 +3,20 @@
  */
 package ihm;
 
-import java.io.PrintStream;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
 import metier.ProcessusPoisson;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.Plot;
 import org.jfree.chart.plot.XYPlot;
 import org.jfree.chart.renderer.xy.XYBarRenderer;
-import org.jfree.chart.renderer.xy.XYItemRenderer;
 import org.jfree.data.xy.IntervalXYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
+
+import java.awt.*;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
 
 public class AfficheProcessPoisson
 extends ChartPanel {
@@ -40,8 +39,12 @@ extends ChartPanel {
 
     public void afficherProcessus() {
         IntervalXYDataset dataset = this.createDataset(this.pp.getListeNombresGeneres());
-        this.setChart(ChartFactory.createXYBarChart("Processus de poisson", "Temps", false, null, dataset));
+        JFreeChart chart = ChartFactory.createXYBarChart("Processus de poisson", "Temps", false, null, dataset);
+        chart.removeLegend();
+        chart.setAntiAlias(true);
+        this.setChart(chart);
         XYPlot plot = (XYPlot)this.getChart().getPlot();
+        plot.setBackgroundPaint(Color.WHITE);
         XYBarRenderer renderer = (XYBarRenderer)plot.getRenderer();
         renderer.setMargin(0.99);
         this.revalidate();
@@ -49,7 +52,7 @@ extends ChartPanel {
     }
 
     private IntervalXYDataset createDataset(List<Double> listeDuree) {
-        XYSeries series = new XYSeries((Comparable)((Object)"Etape"));
+        XYSeries series = new XYSeries("Etape"); // pas affiché grâce à chart.removeLegend();
         System.out.println(Arrays.toString(listeDuree.toArray()));
         double cumulDuree = 0.0;
         Iterator<Double> iterator = listeDuree.iterator();
