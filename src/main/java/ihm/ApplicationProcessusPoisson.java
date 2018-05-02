@@ -60,6 +60,7 @@ public class ApplicationProcessusPoisson
             public void run() {
                 try {
                     ApplicationProcessusPoisson window = new ApplicationProcessusPoisson();
+                    UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
                     window.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
