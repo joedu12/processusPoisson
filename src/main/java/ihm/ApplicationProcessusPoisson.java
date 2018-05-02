@@ -92,7 +92,7 @@ public class ApplicationProcessusPoisson
 
         this.panel_Lambda = new JPanel();
         this.panel_2.add(this.panel_Lambda);
-        this.lblLambda = new JLabel("Lambda");
+        this.lblLambda = new JLabel("λ");
         this.panel_Lambda.add(this.lblLambda);
         panel_Lambda.setBackground(Color.WHITE);
         this.textFieldLambda = new JTextField();
@@ -105,7 +105,7 @@ public class ApplicationProcessusPoisson
         this.btnMAJDonnees.addActionListener(this);
         this.panel_saisieT = new JPanel();
         this.panel_2.add(this.panel_saisieT);
-        this.lblPriodeDeTemps = new JLabel("Durée");
+        this.lblPriodeDeTemps = new JLabel("T");
         panel_saisieT.setBackground(Color.WHITE);
         this.panel_saisieT.add(this.lblPriodeDeTemps);
         this.textFieldT = new JTextField();
@@ -115,7 +115,7 @@ public class ApplicationProcessusPoisson
 
         this.panel_NbSimu = new JPanel();
         this.panel_2.add(this.panel_NbSimu);
-        this.lblNombreSimulation = new JLabel("Nombre de tirages");
+        this.lblNombreSimulation = new JLabel("Nombre d'intervalles");
         this.panel_NbSimu.add(this.lblNombreSimulation);
         panel_NbSimu.setBackground(Color.WHITE);
         this.textFieldNBSimulation = new JTextField();
@@ -151,7 +151,7 @@ public class ApplicationProcessusPoisson
         this.panel_verifLoiExpo.add(this.panel_LoiExpoTheor, "North");
         this.lblLoiExpoTheor = new JLabel("(théorique)   ");
         this.lblLoiExpoTheor.setFont(new Font("Calibri", 1, 11));
-        this.lblLoiExpoLambda = new JLabel("1/ lambda = ");
+        this.lblLoiExpoLambda = new JLabel("1 / λ = ");
         this.panel_LoiExpoTheor.add(this.lblLoiExpoLambda);
         this.lblLoiExpoTheoriq = new JLabel("");
         this.panel_LoiExpoTheor.add(this.lblLoiExpoTheoriq);
@@ -161,7 +161,7 @@ public class ApplicationProcessusPoisson
         this.panel_verifLoiExpo.add(this.panel_LoiExpoPrat, "South");
         this.lblLoiExpoPrat = new JLabel("(pratique)   ");
         this.lblLoiExpoPrat.setFont(new Font("Calibri", 1, 11));
-        this.lblLoiExpoLambda2 = new JLabel("1/ lambda = ");
+        this.lblLoiExpoLambda2 = new JLabel("1 / λ = ");
         this.panel_LoiExpoPrat.add(this.lblLoiExpoLambda2);
         this.lblLoiExpoPratiq = new JLabel("");
         this.panel_LoiExpoPrat.add(this.lblLoiExpoPratiq);
@@ -175,7 +175,7 @@ public class ApplicationProcessusPoisson
         this.panel_verifProcessPoisson.add(this.panel_ProcessPoissonTheor, "North");
         this.lblProcessPoissonTheor = new JLabel("(théorique)   ");
         this.lblProcessPoissonTheor.setFont(new Font("Calibri", 1, 11));
-        this.lblProcessPoissonLambdaT = new JLabel("lambda * T = ");
+        this.lblProcessPoissonLambdaT = new JLabel("λ * T = ");
         this.panel_ProcessPoissonTheor.add(this.lblProcessPoissonLambdaT);
         this.lblProcessPoissonTheoriq = new JLabel("");
         this.panel_ProcessPoissonTheor.add(this.lblProcessPoissonTheoriq);
@@ -185,7 +185,7 @@ public class ApplicationProcessusPoisson
         this.panel_verifProcessPoisson.add(this.panel_ProcessPoissonPrat, "South");
         this.lblProcessPoissonPrat = new JLabel("(pratique)   ");
         this.lblProcessPoissonPrat.setFont(new Font("Calibri", 1, 11));
-        this.lblProcessPoissonLambdaTPrat = new JLabel("lambda * T = ");
+        this.lblProcessPoissonLambdaTPrat = new JLabel("λ * T = ");
         this.panel_ProcessPoissonPrat.add(this.lblProcessPoissonLambdaTPrat);
         this.lblProcessPoissonPratiq = new JLabel("");
         panel_ProcessPoissonPrat.setBackground(Color.WHITE);
