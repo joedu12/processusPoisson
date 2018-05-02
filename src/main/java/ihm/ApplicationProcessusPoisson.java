@@ -88,7 +88,7 @@ public class ApplicationProcessusPoisson
         this.panel_2.setLayout(new FlowLayout(1, 5, 5));
         this.panel_NbSimu = new JPanel();
         this.panel_2.add(this.panel_NbSimu);
-        this.lblNombreSimulation = new JLabel("Nombre Simulation");
+        this.lblNombreSimulation = new JLabel("Nombre de tirages");
         this.panel_NbSimu.add(this.lblNombreSimulation);
         this.textFieldNBSimulation = new JTextField();
         this.panel_NbSimu.add(this.textFieldNBSimulation);
@@ -107,7 +107,7 @@ public class ApplicationProcessusPoisson
         this.btnMAJDonnees.addActionListener(this);
         this.panel_saisieT = new JPanel();
         this.panel_2.add(this.panel_saisieT);
-        this.lblPriodeDeTemps = new JLabel("période de temps");
+        this.lblPriodeDeTemps = new JLabel("Durée");
         this.panel_saisieT.add(this.lblPriodeDeTemps);
         this.textFieldT = new JTextField();
         this.panel_saisieT.add(this.textFieldT);
@@ -128,10 +128,10 @@ public class ApplicationProcessusPoisson
         this.panel_verification = new JPanel();
         this.panel_verification.setBorder(new TitledBorder(null, "Vérification", 4, 2, null, null));
         panel.add(this.panel_verification, "South");
-        this.panel_verification.setLayout(new BorderLayout(0, 0)); // TODO: Tenter GridBagLayout
+        this.panel_verification.setLayout(new GridLayout(1, 2));
         this.panel_verifLoiExpo = new JPanel();
         this.panel_verifLoiExpo.setBorder(new TitledBorder(null, "Loi exponentielle", 4, 2, null, null));
-        this.panel_verification.add(this.panel_verifLoiExpo, "North"); // TODO: tenter "West"
+        this.panel_verification.add(this.panel_verifLoiExpo);
         this.panel_verifLoiExpo.setLayout(new BorderLayout(0, 0));
         this.panel_LoiExpoTheor = new JPanel();
         this.panel_verifLoiExpo.add(this.panel_LoiExpoTheor, "North");
@@ -153,7 +153,7 @@ public class ApplicationProcessusPoisson
         this.panel_LoiExpoPrat.add(this.lblLoiExpoPratiq);
         this.panel_verifProcessPoisson = new JPanel();
         this.panel_verifProcessPoisson.setBorder(new TitledBorder(null, "Processus de Poisson", 4, 2, null, null));
-        this.panel_verification.add(this.panel_verifProcessPoisson, "South"); // TODO: tenter "East"
+        this.panel_verification.add(this.panel_verifProcessPoisson);
         this.panel_verifProcessPoisson.setLayout(new BorderLayout(0, 0));
         this.panel_ProcessPoissonTheor = new JPanel();
         this.panel_verifProcessPoisson.add(this.panel_ProcessPoissonTheor, "North");
