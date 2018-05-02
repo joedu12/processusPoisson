@@ -46,6 +46,7 @@ extends ChartPanel {
         XYPlot plot = (XYPlot)this.getChart().getPlot();
         plot.setBackgroundPaint(Color.WHITE);
         XYBarRenderer renderer = (XYBarRenderer)plot.getRenderer();
+        renderer.setSeriesPaint(0, Color.BLUE);
         renderer.setMargin(0.99);
         this.revalidate();
         this.repaint();
